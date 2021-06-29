@@ -17,9 +17,9 @@ jobs:
       run: |
         cd demo-app
         npm ci
-    - name: Prepare cypress-parallel
+    - name: Prepare lib
       run: |
-        cd cypress-parallel
+        cd lib
         npm ci
     - name: Execute tests without cypress-parallel
       run: |
