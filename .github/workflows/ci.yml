@@ -1,7 +1,12 @@
 name: ci
-on: [push, pull_request]
+on:
+  push:
+    branches: [ $default-branch ]
+  pull_request:
+    branches: [ $default-branch ]
 jobs:
   test:
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout
       uses: actions/checkout@v2
